@@ -1,0 +1,74 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr; /* One column layout */
+    gap: 10px; /* 10px gap */
+    padding: 10px;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  figure {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  figure img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (min-width: 772px) {
+    body {
+      grid-template-columns: 1fr 1fr; /* Two columns */
+    }
+  
+    figure img {
+      border-radius: 50%; /* Circular images */
+    }
+  
+    figure:last-child {
+      grid-column: span 2; /* Span across both columns */
+    }
+  }
+  @media (min-width: 992px) {
+    figure img {
+      border-radius: 0; /* Remove circular shape */
+    }
+  
+    figure:nth-child(3n) {
+      grid-column: span 2; /* Every third image spans two columns */
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      scroll-behavior: auto;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212; /* Dark background for the page */
+    }
+  
+    figure {
+      background-color: #333; /* Dark figure background */
+      color: #ffd700; /* Light yellow text */
+      border: 1px solid #000; /* Black border */
+    }
+  }
+  /* Add padding and text alignment to paragraphs */
+p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+  }
